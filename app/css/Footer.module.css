@@ -1,0 +1,39 @@
+.footer {
+      color: #fff;
+    background-color: #000;
+    border-top: 1px solid #ffffff1a;
+    padding: 0.4rem;
+    border-top: none;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-black-ops), system-ui;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  margin: 0;
+  line-height: 1;
+}
+
+.subtitle {
+     font-family: var(--font-black-ops), system-ui;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-top: -0.8rem;
+}
+
+.tagline {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: #4b5563;
+}

@@ -1,0 +1,130 @@
+.contactSection {
+  padding: 3rem 1rem;
+  background-color: #f3f4f6; /* Gris claro (estilo Planes) */
+  color: #000000;
+}
+
+.container {
+  max-width: 50rem; /* Un poco más estrecho para centrar la atención */
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-family: var(--font-black-ops), system-ui;
+  font-size: 2.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.socialHeader {
+  text-align: center;
+  margin: 4rem 0 2rem;
+}
+
+.socialTitle {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* Grid Flexible y Alineado */
+.flexGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* LA TARJETA ÚNICA (COHESIÓN TOTAL) */
+.cohesiveCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff; /* Blanco sobre fondo gris */
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  flex: 1; /* Para que crezcan igual */
+  min-width: 280px;
+  max-width: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.cohesiveCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  border-color: #000000;
+}
+
+.iconWrapperSmall {
+  display: flex;
+  padding: 0.6rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.handle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+/* Botón Final */
+.waButtonWrapper {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.waButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #000000;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.waButton:hover {
+  background-color: #25d366;
+  transform: scale(1.05);
+}
