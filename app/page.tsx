@@ -11,10 +11,10 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <div id="servicios"><Services /></div>
-      <div id="planes"><Plans /></div>
-      <div id="sobre-mi"><About /></div>
-      <div id="contacto"><Contact /></div>
+      <div><Services /></div>
+      <div><Plans /></div>
+      <div><About /></div>
+      <div><Contact /></div>
       <Footer />
     </main>
   );

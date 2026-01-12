@@ -18,7 +18,7 @@ export function About() {
   ];
 
   return (
-    <section className={styles.aboutSection}>
+    <section id="sobre-mi" className={styles.aboutSection}>
       <div className={styles.container}>
         <div className={styles.mainGrid}>
           <div className={styles.imageWrapper}>
