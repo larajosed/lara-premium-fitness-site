@@ -8,7 +8,7 @@ import { Header } from "./components/Header";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Header />
       <Hero />
       <div id="servicios"><Services /></div>
@@ -16,6 +16,6 @@ export default function Home() {
       <div id="sobre-mi"><About /></div>
       <div id="contacto"><Contact /></div>
       <Footer />
-    </div>
+    </main>
   );
 }
