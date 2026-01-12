@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { MessageCircle, Instagram, Mail } from "lucide-react";
 import styles from "../css/Contact.module.css";
 
-// Icono de TikTok manual para evitar errores de versión
 const TiktokIcon = ({ size = 24 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
@@ -32,13 +31,11 @@ export function Contact() {
     <section id="contacto" className={styles.contactSection}>
       <div className={styles.container}>
         
-        {/* Encabezado Principal */}
         <div className={styles.header}>
           <h2 className={styles.title}>Contacto</h2>
           <p className={styles.subtitle}>Hablemos de tus objetivos</p>
         </div>
 
-        {/* Bloque de Contacto Directo */}
         <div className={styles.flexGrid}>
           {contactMethods.map((item, index) => (
             <a key={index} href={item.link} className={styles.cohesiveCard} target="_blank" rel="noopener noreferrer">
@@ -53,12 +50,9 @@ export function Contact() {
           ))}
         </div>
 
-        {/* Separador sutil / Título Redes */}
         <div className={styles.socialHeader}>
           <h3 className={styles.title}>Sígueme en Redes</h3>
         </div>
-
-        {/* Bloque de Redes Sociales (IDÉNTICO AL ANTERIOR) */}
         <div className={styles.flexGrid}>
           {socialMedia.map((item, index) => (
             <a key={index} href={item.link} className={styles.cohesiveCard} target="_blank" rel="noopener noreferrer">
@@ -73,7 +67,6 @@ export function Contact() {
           ))}
         </div>
 
-        {/* Botón de Acción Final */}
         <div className={styles.waButtonWrapper}>
           <a href="https://wa.me/34693537526" target="_blank" className={styles.waButton}>
             {isMounted && <MessageCircle size={20} />}
