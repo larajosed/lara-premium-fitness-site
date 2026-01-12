@@ -10,10 +10,9 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} role="contentinfo">
       <div className={styles.container}>
-        {/* Usamos solo las clases del CSS modular */}
-        <h1 className={styles.title}>LARA</h1>
+        <h2 className={styles.title}>LARA</h2>
         <p className={styles.subtitle}>PREMIUM FITNESS</p>
         
         <p className={styles.tagline}>Transforma tu cuerpo, transforma tu vida</p>

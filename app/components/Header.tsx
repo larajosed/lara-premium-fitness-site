@@ -15,7 +15,7 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "#" },
+    { name: "Inicio", href: "inicio" },
     { name: "Sobre Mí", href: "#sobre-mi" },
     { name: "Planes", href: "#planes" },
     { name: "Contacto", href: "#contacto" },
@@ -24,11 +24,9 @@ export function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
-        {/* Espaciador para equilibrar el layout (lado izquierdo vacío) */}
         <div className={styles.spacer}></div>
 
-        {/* Navegación Centrada */}
-        <nav className={styles.nav}>
+        <nav className={styles.nav} aria-label="Navegación principal">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className={styles.link}>
               {link.name}
@@ -36,7 +34,6 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Botón WhatsApp (lado derecho) */}
         <div className={styles.ctaWrapper}>
           <a 
             href="https://wa.me/34693537526" 

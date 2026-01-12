@@ -22,8 +22,15 @@ export const blackOps = Black_Ops_One({
 });
 
 export const metadata: Metadata = {
-  title: "Lara Premium Fitness",
+  title: "Lara Premium Fitness — Entrenador personal online",
   description: "Entrenamientos online personalizados para transformar tu cuerpo y mente",
+   openGraph: {
+    title: "Lara Premium Fitness",
+    description: "Entrenamientos personalizados online por entrenador certificado",
+    url: "https://larapremiumfitness.com",
+    images: ["/images/og-image.png"]
+  },
+  robots: { index: true, follow: true }
 };
 
 export default function RootLayout({

@@ -2,15 +2,13 @@ import { blackOps } from "../layout";
 import styles from "../css/Hero.module.css";
 import { ChevronDown } from "lucide-react";
 
-
-
 export function Hero() {
   return (
-    <section className={styles.heroSection}>
+    <section id="inicio" className={styles.heroSection}>
       <div className={styles.backgroundWrapper}>
         <img 
-          src="/images/gym.png"
-          alt="LARA Premium Fitness" 
+          src="/public/gym.png"
+          alt="Lara Premium Fitness" 
           className={styles.image}
         />
         <div className={styles.overlay}></div>
