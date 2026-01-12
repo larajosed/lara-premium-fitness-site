@@ -7,7 +7,7 @@ export function Hero() {
     <section id="inicio" className={styles.heroSection}>
       <div className={styles.backgroundWrapper}>
         <img 
-          src="/public/gym.png"
+          src="/images/gym.png"
           alt="Lara Premium Fitness" 
           className={styles.image}
         />
