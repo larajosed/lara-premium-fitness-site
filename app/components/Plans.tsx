@@ -86,9 +86,13 @@ export function Plans() {
                 </div>
               )}
 
-              <button className={`${styles.ctaButton} ${plan.highlighted ? styles.btnHighlighted : styles.btnNormal}`}>
+              
+
+               <a href="https://wa.me/34693537526" target="_blank" className={styles.waButton}>
+            <button className={`${styles.ctaButton} ${plan.highlighted ? styles.btnHighlighted : styles.btnNormal}`}>
                 Comenzar Ahora
               </button>
+          </a>
             </div>
           ))}
         </div>
