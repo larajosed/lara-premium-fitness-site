@@ -24,10 +24,10 @@
 }
 
 .description {
-  font-size: 1.125rem; 
-  color: #4b5563; 
-  max-width: 42rem;
-  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.3em; /* Esto grita lujo */
+  font-size: 0.7rem;
+  font-weight: 300;
 }
 
 .grid {

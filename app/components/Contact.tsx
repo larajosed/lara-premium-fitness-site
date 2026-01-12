@@ -55,7 +55,7 @@ export function Contact() {
 
         {/* Separador sutil / Título Redes */}
         <div className={styles.socialHeader}>
-          <h3 className={styles.socialTitle}>Sígueme en Redes</h3>
+          <h3 className={styles.title}>Sígueme en Redes</h3>
         </div>
 
         {/* Bloque de Redes Sociales (IDÉNTICO AL ANTERIOR) */}

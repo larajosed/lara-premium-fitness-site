@@ -2,6 +2,8 @@ import { blackOps } from "../layout";
 import styles from "../css/Hero.module.css";
 import { ChevronDown } from "lucide-react";
 
+
+
 export function Hero() {
   return (
     <section className={styles.heroSection}>
@@ -24,13 +26,10 @@ export function Hero() {
         <p className={styles.description}>
           Transforma tu cuerpo y mente con entrenamientos personalizados diseñados para alcanzar tus objetivos
         </p>
-        <button className={styles.ctaButton}>
-          Ver Planes
-        </button>
       </div>
-      <div className={styles.scrollIndicator}>
+     <a href="#planes" className={styles.scrollIndicator}>
          <ChevronDown className="text-white" size={32} />
-      </div>
+      </a>
     </section>
   );
 }

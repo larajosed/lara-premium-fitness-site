@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .backgroundWrapper {
@@ -14,6 +15,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  /* Animación sutil para la imagen al cargar */
+  animation: slowScale 2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
 }
 
 .image {
@@ -28,7 +31,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -39,81 +42,116 @@
   padding: 0 1rem;
 }
 
+/* --- ELEMENTOS ANIMADOS --- */
+
 .title {
-  font-size: 3.75rem; 
-  margin-bottom: 0;   
-  line-height: 0.9;   
+  font-size: 3.75rem;
+  margin-bottom: 0;
+  line-height: 0.9;
   letter-spacing: 0.1em;
+  /* Animación inmediata */
+  animation: revealUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  margin-top: -5px;   
+  margin-top: -5px;
   letter-spacing: 0.2em;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
+  opacity: 0; /* Empieza invisible */
+  animation: revealUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s; /* Aparece después del título */
 }
 
 .description {
-  font-size: 1.125rem; /* lg */
+  font-size: 1.125rem;
   max-width: 42rem;
   margin: 0 auto 3rem auto;
   line-height: 1.6;
+  opacity: 0;
+  animation: revealUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s; /* Aparece después del subtítulo */
 }
 
 .ctaButton {
   background-color: white;
   color: black;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem; /* Un poco más ancho para estilo premium */
   border-radius: 9999px;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: revealUp 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  animation-delay: 0.7s; /* Aparece al final */
 }
 
 .ctaButton:hover {
-  background-color: #e5e7eb;
+  background-color: #f3f4f6;
+  transform: scale(1.05);
 }
+
+/* --- INDICADORES Y RESPONSIVE --- */
 
 .scrollIndicator {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  animation: bounce 2s infinite;
+  animation: bounce 2s infinite, fadeIn 2s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
 }
-
-.scrollText {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #d1d5db;
-}
-
 
 @media (min-width: 768px) {
- .title {
-    font-size: 11rem; 
+  .title {
+    font-size: 11rem;
     letter-spacing: 6px;
     line-height: 0.85;
     margin-bottom: 0;
   }
   
   .subtitle {
-    font-size: 2.7rem; 
-    margin-top: -15px; 
+    font-size: 2.7rem;
+    margin-top: -15px;
     letter-spacing: 0.2em;
   }
 
   .description {
     font-size: 1.25rem;
-    margin-top: 2rem; 
+    margin-top: 2rem;
   }
 }
 
+/* --- KEYFRAMES --- */
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
   40% { transform: translate(-50%, -10px); }
   60% { transform: translate(-50%, -5px); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slowScale {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }

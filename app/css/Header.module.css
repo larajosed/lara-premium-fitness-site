@@ -1,0 +1,113 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 1.5rem 0;
+  background: transparent;
+}
+
+.scrolled {
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Sistema de 3 columnas para centrar el nav */
+.spacer, .ctaWrapper {
+  flex: 1;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex: 2; /* Ocupa el espacio central */
+}
+
+/* ... el resto del código se mantiene, actualiza estas clases: */
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.7rem; /* Un poco más pequeño para elegancia */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em; /* Más aire entre letras */
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.link:hover {
+  opacity: 1;
+  letter-spacing: 0.2em; /* Animación sutil de expansión */
+}
+
+.cta {
+  position: relative;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.5rem 0; /* Sin padding horizontal porque no hay caja */
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* El subrayado minimalista */
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Empieza con ancho 0 */
+  height: 1px; /* Línea de 1 píxel de grosor */
+  background-color: #ffffff;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cta:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.cta:hover::after {
+  width: 100%; /* La línea se expande al 100% al pasar el ratón */
+}
+
+/* Opcional: un pequeño efecto de brillo al hacer scroll */
+.scrolled .cta {
+  opacity: 0.8;
+}
+
+.scrolled .cta:hover {
+  opacity: 1;
+}
+/* Ocultar nav en móviles para evitar amontonamiento */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .spacer {
+    display: none;
+  }
+}
