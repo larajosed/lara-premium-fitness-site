@@ -1,0 +1,9 @@
+# Robots.txt creado automáticamente
+# Reemplaza `https://larapremiumfitness.com` por el dominio real si procede
+
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /admin
+
+Sitemap: https://larapremiumfitness.com/sitemap.xml
