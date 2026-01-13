@@ -15,19 +15,21 @@
 
 .title {
   margin-bottom: 1rem;
-  font-family: var(--font-black-ops), system-ui; /* Usamos la fuente de Lara */
+  font-family: var(--font-black-ops), system-ui; 
   font-size: 2.25rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .description {
   text-transform: uppercase;
-  letter-spacing: 0.3em; /* Esto grita lujo */
+  letter-spacing: 0.3em;
   font-size: 0.7rem;
   font-weight: 300;
+  color: var(--text-primary);
 }
 
 .grid {
@@ -62,7 +64,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.75rem; 
-  color: #111827;
+   color: var(--text-primary);
 }
 
 .cardDescription {

@@ -20,15 +20,17 @@ padding: 1rem 0rem 3rem 0rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
 
 
 .subtitle {
   text-transform: uppercase;
-  letter-spacing: 0.3em; /* Esto grita lujo */
+  letter-spacing: 0.3em;
   font-size: 0.7rem;
   font-weight: 300;
+  color: var(--text-primary);
 }
 
 .socialHeader {
@@ -99,7 +101,7 @@ padding: 1rem 0rem 3rem 0rem;
 .handle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #000000;
+    color: var(--text-primary);
   margin: 0;
 }
 

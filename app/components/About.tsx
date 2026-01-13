@@ -23,7 +23,7 @@ export function About() {
         <div className={styles.mainGrid}>
           <div className={styles.imageWrapper}>
             <img 
-              src="./images/jdlm1.png"
+              src="./images/jdlm.png"
               alt="Lara - Entrenador Personal"
               className={styles.mainImage}
             />

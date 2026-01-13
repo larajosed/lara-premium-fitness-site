@@ -1,6 +1,6 @@
 .plansSection {
   padding: 2rem 1rem;
-  background-color: #f9fafb; 
+  background-color: #f9fafb;
 }
 
 .container {
@@ -10,157 +10,227 @@
 
 .header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .title {
   margin-bottom: 1rem;
-  font-family: var(--font-black-ops), system-ui; /* Usamos la fuente de Lara */
+  font-family: var(--font-black-ops), system-ui;
   font-size: 2.25rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .subtitle {
   text-transform: uppercase;
-  letter-spacing: 0.3em; /* Esto grita lujo */
+  letter-spacing: 0.3em;
   font-size: 0.7rem;
   font-weight: 300;
+  color: var(--text-primary);
 }
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
   grid-template-columns: 1fr;
 }
-
 
 .card {
   position: relative;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .cardNormal {
   background-color: white;
-  color: black;
+  color: var(--text-primary);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
 }
 
 .cardHighlighted {
   background-color: white;
-  color: black;
+  color: var(--text-primary);
   border: 2px solid black;
-  transform: scale(1.05);
+  transform: scale(1.02);
   z-index: 10;
 }
 
 .badge {
   position: absolute;
-  top: -1rem;
+  top: -0.75rem;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(to right, #facc15, #ca8a04);
-  color: black;
-  padding: 0.25rem 1rem;
+  background: black;
+  color: white;
+  padding: 0.2rem 1rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   font-weight: 700;
   white-space: nowrap;
 }
 
 .planHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .planName {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.planDescription {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
 }
 
 .priceWrapper {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.mainPrice {
+  display: flex;
+  align-items: baseline;
 }
 
 .price {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
-.period {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+.monthLabel {
+  font-size: 1rem;
+  color: #6b7280;
 }
 
-.periodNormal { color: #6b7280; }
-.periodHighlighted { color: #6b7280; }
+.totalPayment {
+ font-size: 0.85em; 
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
 
 .featureList {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex-grow: 1;
 }
 
 .featureItem {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.875rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
 }
 
-.checkIconNormal { color: black; }
-.checkIconHighlighted { color: #facc15; }
+.checkIconNormal { 
+   color: var(--text-primary);
+}
 
-.savings {
+.checkIconHighlighted { 
+  color: #16a34a;
+}
+
+
+.savingsTag {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #16a34a;
 }
 
-.savingsNormal { color: #16a34a; }
-.savingsHighlighted { color: #facc15; }
-
+.waLink {
+  text-decoration: none;
+}
 
 .ctaButton {
   width: 100%;
   padding: 0.75rem;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
 }
 
 .btnNormal {
+  background-color: #f3f4f6;
+    color: var(--text-primary);
+}
+
+.btnNormal:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.btnHighlighted {
   background-color: black;
   color: white;
 }
 
-.btnNormal:hover { background-color: #1f2937; }
-
-.btnHighlighted {
-   background-color: black;
-  color: white;
+.btnHighlighted:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btnHighlighted:hover { background-color: #e5e7eb; }
+
+.starWrapper {
+  position: absolute;
+  top: -15px;     
+  right: -15px;    
+  background: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+  transform: rotate(15deg); 
+}
+
+.starWrapper {
+  animation: pop 3s ease-in-out infinite;
+}
+
+@keyframes pop {
+  0%, 100% { transform: rotate(15deg) scale(1); }
+  50% { transform: rotate(15deg) scale(1.1); }
+}
+
 
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
-  .title { font-size: 2rem; }
+}
+
+@media (max-width: 767px) {
+  .cardHighlighted {
+    transform: scale(1);
+    margin: 1.5rem 0;
+  }
 }

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import styles from "../css/Plans.module.css";
 
 export function Plans() {
@@ -10,29 +10,44 @@ export function Plans() {
     setIsMounted(true);
   }, []);
 
+
+  const commonFeatures = [
+    "Rutinas personalizadas",
+    "Actualización semanal",
+    "Soporte prioritario WhatsApp",
+    "Seguimiento de progreso",
+    "Guía de hábitos nutricionales", 
+    "Videollamadas de seguimiento",
+    "Ajustes ilimitados",
+    "Acceso a comunidad online"
+  ];
+
   const plans = [
     {
       name: "Plan Mensual",
       price: "100",
+      monthlyEquivalent: "100", 
       period: "mes",
-      features: ["Rutinas personalizadas", "Actualización semanal", "Soporte prioritario WhatsApp", "Seguimiento de progreso", "Plan nutricional detallado", "Videollamadas de seguimiento", "Ajustes ilimitados", "Acceso a comunidad online"],
+      description: "Ideal para empezar",
       highlighted: false
     },
     {
       name: "Plan Trimestral",
-      price: "250",
+      price: "255",
+      monthlyEquivalent: "85",
       period: "3 meses",
-      features: ["Rutinas personalizadas", "Actualización semanal", "Soporte prioritario WhatsApp", "Seguimiento de progreso", "Plan nutricional detallado", "Videollamadas de seguimiento", "Ajustes ilimitados", "Acceso a comunidad online"],
+      description: "El más equilibrado",
       highlighted: true,
-      savings: "Ahorra 50€"
+      savings: "Ahorras 45€"
     },
     {
       name: "Plan Semestral",
       price: "450",
+      monthlyEquivalent: "75",
       period: "6 meses",
-      features: ["Rutinas personalizadas", "Actualización semanal", "Soporte prioritario WhatsApp", "Seguimiento de progreso", "Plan nutricional detallado", "Videollamadas de seguimiento", "Ajustes ilimitados", "Acceso a comunidad online"],
+      description: "Compromiso total",
       highlighted: false,
-      savings: "Ahorra 150€"
+      savings: "Ahorras 150€"
     }
   ];
 
@@ -40,9 +55,9 @@ export function Plans() {
     <section id="planes" className={styles.plansSection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Planes</h2>
+          <h2 className={styles.title}>Elige tu plan</h2>
           <p className={styles.subtitle}>
-            Elige el plan que mejor se adapte a tus necesidades y objetivos
+            Todos los planes incluyen asesoría completa y personalizada.
           </p>
         </div>
 
@@ -52,26 +67,41 @@ export function Plans() {
               key={index} 
               className={`${styles.card} ${plan.highlighted ? styles.cardHighlighted : styles.cardNormal}`}
             >
-              {plan.highlighted && (
-                <div className={styles.badge}>MÁS POPULAR</div>
-              )}
+            {plan.highlighted && (
+  <>
+    <div className={styles.badge}>MÁS POPULAR</div>
+    {isMounted && (
+      <div className={styles.starWrapper}>
+        <Star size={24} fill="#f8ab6b" stroke="#ffffffff" />
+      </div>
+    )}
+  </>
+)}
 
               <div className={styles.planHeader}>
                 <h3 className={styles.planName}>{plan.name}</h3>
+                <p className={styles.planDescription}>{plan.description}</p>
+                
                 <div className={styles.priceWrapper}>
-                  <span className={styles.price}>{plan.price}€</span>
-                  <span className={`${styles.period} ${plan.highlighted ? styles.periodHighlighted : styles.periodNormal}`}>
-                    /{plan.period}
-                  </span>
+                  <div className={styles.mainPrice}>
+                    <span className={styles.price}>{plan.monthlyEquivalent}€</span>
+                    <span className={styles.monthLabel}>/mes</span>
+                  </div>
+                  {plan.period !== "mes" && (
+                    <span className={styles.totalPayment}>
+                      Pago unico de {plan.price}€
+                    </span>
+                  )}
                 </div>
               </div>
 
+              {/* Lista de características (ahora vienen de la constante común) */}
               <ul className={styles.featureList}>
-                {plan.features.map((feature, idx) => (
+                {commonFeatures.map((feature, idx) => (
                   <li key={idx} className={styles.featureItem}>
                     {isMounted && (
                       <Check 
-                        size={20} 
+                        size={18} 
                         className={plan.highlighted ? styles.checkIconHighlighted : styles.checkIconNormal} 
                       />
                     )}
@@ -81,18 +111,16 @@ export function Plans() {
               </ul>
 
               {plan.savings && (
-                <div className={`${styles.savings} ${plan.highlighted ? styles.savingsHighlighted : styles.savingsNormal}`}>
+                <div className={styles.savingsTag}>
                   {plan.savings}
                 </div>
               )}
 
-              
-
-               <a href="https://wa.me/34693537526" target="_blank" className={styles.waButton}>
-            <button className={`${styles.ctaButton} ${plan.highlighted ? styles.btnHighlighted : styles.btnNormal}`}>
-                Comenzar Ahora
-              </button>
-          </a>
+              <a href="https://wa.me/34693537526" target="_blank" className={styles.waLink}>
+                <button className={`${styles.ctaButton} ${plan.highlighted ? styles.btnHighlighted : styles.btnNormal}`}>
+                  Empezar mi cambio
+                </button>
+              </a>
             </div>
           ))}
         </div>
