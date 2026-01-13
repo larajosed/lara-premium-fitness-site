@@ -15,10 +15,12 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "inicio" },
-    { name: "Sobre Mí", href: "#sobre-mi" },
+    { name: "Inicio", href: "#inicio" },
+    { name: "Servicios", href: "#servicios" },
     { name: "Planes", href: "#planes" },
+    { name: "Sobre Mí", href: "#sobre-mi" },
     { name: "Contacto", href: "#contacto" },
+    
   ];
 
   return (

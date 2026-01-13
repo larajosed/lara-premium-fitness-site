@@ -52,10 +52,10 @@ const [isMounted, setIsMounted] = useState(false);
   ];
 
   return (
-    <section className={styles.servicesSection}>
+    <section id="servicios" className={styles.servicesSection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>¿Qué Ofrecemos?</h2>
+          <h2 className={styles.title}>Servicios</h2>
           <p className={styles.description}>
             Programas completos diseñados para transformar tu cuerpo y estilo de vida
           </p>
