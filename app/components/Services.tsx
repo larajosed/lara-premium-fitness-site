@@ -39,16 +39,16 @@ const [isMounted, setIsMounted] = useState(false);
       title: "Resultados Garantizados",
       description: "Metodología probada para alcanzar tus metas fitness"
     },
-    {
-      icon: Heart,
-      title: "Nutrición Incluida",
-      description: "Guías nutricionales para complementar tu entrenamiento"
+      {
+  icon: Heart,
+  title: "Apoyo Nutricional",
+  description: "Orientación en hábitos saludables y tips de alimentación, desde una perspectiva de acompañamiento y no de consulta clínica."
     },
-    {
-      icon: Smartphone,
-      title: "100% Online",
-      description: "Entrena desde casa o el gimnasio con acceso 24/7"
-    }
+  {
+  icon: Smartphone,
+  title: "Entrenamiento 100% Online",
+  description: "Entrenar donde quieras con la seguridad de tener mi apoyo y seguimiento constante."
+}
   ];
 
   return (
