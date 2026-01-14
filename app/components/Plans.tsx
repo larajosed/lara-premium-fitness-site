@@ -28,7 +28,7 @@ export function Plans() {
       price: "100",
       monthlyEquivalent: "100", 
       period: "mes",
-      description: "Ideal para empezar",
+      description: "",
       highlighted: false
     },
     {
@@ -36,7 +36,7 @@ export function Plans() {
       price: "255",
       monthlyEquivalent: "85",
       period: "3 meses",
-      description: "El más equilibrado",
+      description: "",
       highlighted: true,
       savings: "Ahorras 45€"
     },
@@ -45,7 +45,7 @@ export function Plans() {
       price: "450",
       monthlyEquivalent: "75",
       period: "6 meses",
-      description: "Compromiso total",
+      description: "",
       highlighted: false,
       savings: "Ahorras 150€"
     }
@@ -89,13 +89,12 @@ export function Plans() {
                   </div>
                   {plan.period !== "mes" && (
                     <span className={styles.totalPayment}>
-                      Pago unico de {plan.price}€
+                      Pago único de {plan.price}€
                     </span>
                   )}
                 </div>
               </div>
 
-              {/* Lista de características (ahora vienen de la constante común) */}
               <ul className={styles.featureList}>
                 {commonFeatures.map((feature, idx) => (
                   <li key={idx} className={styles.featureItem}>

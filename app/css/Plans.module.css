@@ -76,6 +76,21 @@
   white-space: nowrap;
 }
 
+/*.badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, #facc15, #ca8a04); 
+  color: black;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
 .planHeader {
   text-align: center;
   margin-bottom: 1rem;
@@ -145,7 +160,9 @@
 }
 
 .checkIconHighlighted { 
-  color: #16a34a;
+  color: var(--text-primary);
+  
+  /*color: #facc15;   color: #16a34a;*/
 }
 
 
